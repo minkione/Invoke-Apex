@@ -467,9 +467,14 @@ Usage: ```Invoke-TcpScan -IpAddress 192.168.1.1 -Ports 22,80,443,445,8080```
 Note: This is a SLOW scanner, one probe every second. The slow scanning is intentional as it helps to evade things like Symantec's Endpoint Protection firewall. The idea behind this is to generate as little noise as possible.
 
 ## Invoke-TimeStomp
-Modifies a files' Creation/Modification/Last Accessed times to that of C:\windows\system32\cmd.exe on the target system.
+Modifies a files' Creation Time to that of C:\windows\system32\cmd.exe unless "TimeOf" parameter is used.
 
-Usage: ```Invoke-TimeStomp -File C:\programdata\file.exe```
+
+Usage: 
+
+```Invoke-TimeStomp -File C:\programdata\file.exe```
+
+```Invoke-TimeStomp -File C:\temp\file.exe -TimeOf C:\windows\system32\calc.exe```
 
 ## Invoke-XuLiE
 Compiles a reverse (PowerShell) HTTPS shell .NET executable in real-time using csc.exe which utilizes ```System.Management.Automation.dll``` for its functionality. It drops the resulting executable in a randomly selected directory. Creates a .lnk in StartUp for persistence. The generated file will have a randomly-generated file name, a .dat extension and be executed via "cmd /c start file.dat". 
