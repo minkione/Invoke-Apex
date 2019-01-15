@@ -462,9 +462,9 @@ Gathers information about a system.
 ## Invoke-TcpScan
 Simple TCP Port Scanner.
 
-Usage: ```Invoke-TcpScan -IpAddress 192.168.1.1```
+Usage: ```Invoke-TcpScan -IpAddress 192.168.1.1 -Ports 22,80,443,445,8080```
 
-Note: This is a SLOW scanner, one probe every second, and ports are defined in the Invoke-TcpScan.ps1 script. The slow scanning is intentional as it helps to evade things like Symantec's Endpoint Protection firewall. The idea behind this is to generate as little noise as possible.
+Note: This is a SLOW scanner, one probe every second. The slow scanning is intentional as it helps to evade things like Symantec's Endpoint Protection firewall. The idea behind this is to generate as little noise as possible.
 
 ## Invoke-TimeStomp
 Modifies a files' Creation/Modification/Last Accessed times to that of C:\windows\system32\cmd.exe on the target system.
@@ -522,4 +522,3 @@ Usage: ```New-Reverse -Lhost 192.168.1.1 -Lport 443```
 
 # DISCLAIMER
 THIS SOFTWARE IS PROVIDED 'AS IS' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
